@@ -3,7 +3,7 @@ resource "openstack_compute_instance_v2" "example_vm" {
   image_name  = "cirros"
   flavor_name = "m1.tiny"
   network {
-    name = "vnet"
+    name = openstack_networking_network_v2.main.name
   }
 }
 
